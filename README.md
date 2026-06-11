@@ -59,7 +59,7 @@ End-to-end preprocessing pipeline on a medical insurance dataset. Key work inclu
 
 ---
 
-## 🔜 Coming Soon
+##  Done ✔️
 
 ### Part 2 — Regression
 - Linear Regression — concept and intuition
