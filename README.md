@@ -9,10 +9,12 @@
 
 | Part | Topic | Status |
 |------|-------|--------|
+| Part 0 — Statistics Foundations | Z-Test, T-Test, ANOVA, Chi-Square, Outlier Detection | ✅ Done |
 | Part 1 — Foundations | EDA, Data Cleaning, Feature Engineering | ✅ Done |
 | Part 2 — Regression | Linear Regression, Cost Function, Gradient Descent | ✅ Done |
 | Part 3 — Classification | Logistic Regression, KNN, SVM, Decision Trees, Naive Bayes | ✅ Done |
 | Part 4 — Advanced ML | Ensemble Methods, Clustering, PCA, XGBoost | ✅ Done |
+| Part 5 — Real-World Projects | End-to-end ML apps with Streamlit dashboards | ✅ Done |
 
 ---
 
@@ -20,6 +22,14 @@
 
 ```
 ML MODELS/
+├── 00_Statistics_Foundations/        # Statistical tests for ML
+│   ├── 01_Z_Test.ipynb                  - Z-Test for population means
+│   ├── 02_One_Sample_T_Test.ipynb       - One-sample T-Test
+│   ├── 03_Two_Sample_T_Test.ipynb       - Welch's T-Test comparison
+│   ├── 04_ANOVA_Test.ipynb              - One-Way ANOVA analysis
+│   ├── 05_Chi_Square_Test.ipynb         - Chi-Square independence test
+│   └── 06_Outlier_Detection.ipynb       - IQR-based outlier detection
+│
 ├── 01_Regression/                    # Regression models
 │   ├── 01_Linear_Regression.ipynb        - Food delivery time prediction
 │   ├── 02_Food_Delivery_Time_Prediction  - Extended EDA + modeling
@@ -60,9 +70,10 @@ ML MODELS/
 │   ├── 04_Insurance_Data_EDA.ipynb       - Feature engineering pipeline
 │   └── 05_EV_Population_EDA.ipynb        - Electric vehicle data analysis
 │
-├── 06_Projects/                      # Full projects
+├── 06_Projects/                      # Full projects (local + external)
 │   ├── 01_Gym_Members_Analysis.ipynb     - Workout data analysis
-│   └── 02_Insurance_ML_Project.ipynb     - Complete ML project
+│   ├── 02_Insurance_ML_Project.ipynb     - Complete ML project
+│   └── 🔗 See "Real-World Projects" section below for deployed apps
 │
 ├── 07_NLP/                           # Natural Language Processing
 │   ├── LR_SVM_NB_K_NN_DT.ipynb          - NLP text classification
@@ -81,6 +92,32 @@ ML MODELS/
     ├── expenses.csv
     └── ...
 ```
+
+---
+
+## Part 0 — Statistics Foundations 📊
+
+> *"The math behind ML — hypothesis testing, significance, and data validation."*
+
+### What You'll Learn
+- Z-Test — population mean testing
+- One-Sample & Two-Sample T-Tests — comparing group means
+- ANOVA — testing differences across multiple groups
+- Chi-Square Test — categorical feature independence
+- Outlier Detection — IQR method for anomaly identification
+
+### 📂 Notebooks
+
+| # | Notebook | Concept | Dataset |
+|---|----------|---------|---------|
+| 01 | [`01_Z_Test.ipynb`](./ML%20MODELS/00_Statistics_Foundations/01_Z_Test.ipynb) | Z-Test for population means | Titanic |
+| 02 | [`02_One_Sample_T_Test.ipynb`](./ML%20MODELS/00_Statistics_Foundations/02_One_Sample_T_Test.ipynb) | One-sample T-Test | Titanic |
+| 03 | [`03_Two_Sample_T_Test.ipynb`](./ML%20MODELS/00_Statistics_Foundations/03_Two_Sample_T_Test.ipynb) | Welch's T-Test | Titanic |
+| 04 | [`04_ANOVA_Test.ipynb`](./ML%20MODELS/00_Statistics_Foundations/04_ANOVA_Test.ipynb) | One-Way ANOVA | Titanic |
+| 05 | [`05_Chi_Square_Test.ipynb`](./ML%20MODELS/00_Statistics_Foundations/05_Chi_Square_Test.ipynb) | Chi-Square independence | Titanic |
+| 06 | [`06_Outlier_Detection.ipynb`](./ML%20MODELS/00_Statistics_Foundations/06_Outlier_Detection.ipynb) | IQR outlier detection | Titanic |
+
+**Source:** Pulled from [ML-Statistics-Foundations](https://github.com/loisekk/ML-Statistics-Foundations)
 
 ---
 
@@ -197,12 +234,45 @@ KMeans and Hierarchical Clustering on country socio-economic data.
 
 ---
 
+## Part 5 — Real-World Projects 🌍
+
+> *End-to-end ML pipelines with deployed Streamlit dashboards and production-ready models.*
+
+| # | Project | Domain | Model | Metric | Dashboard |
+|---|---------|--------|-------|--------|-----------|
+| 1 | [**F1 Strategy Engine**](https://github.com/loisekk/f1-strategy-engine) | 🏎️ Motorsport | XGBoost / LightGBM | F1=0.94, AUC=0.99 | [Live Demo](https://f1-strategy-engine.streamlit.app) |
+| 2 | [**Ford Car Price Prediction**](https://github.com/loisekk/Ford-Car-Price-Prediction) | 🚗 Automotive | Random Forest | R²=0.91 | [Live Demo](https://ford-car-price-prediction.streamlit.app) |
+| 3 | [**CordisAI Heart Prediction**](https://github.com/loisekk/Cordisai-heart-prediction) | 🏥 Healthcare | KNN | Acc=86.4% | [Live Demo](https://cordisai-heart-prediction.streamlit.app) |
+| 4 | [**Stock Price Prediction**](https://github.com/loisekk/Stock-Price-Prediction) | 📈 Finance | Linear Regression | R²=0.91 | [Live Demo](https://stock-price-prediction.streamlit.app) |
+| 5 | [**Edumind Student Performance**](https://github.com/loisekk/Edumind-student-performance) | 🎓 Education | XGBoost + Ensemble | R²=0.9999 | Flask App |
+
+### Project Highlights
+
+#### 🏎️ F1 Strategy Engine
+ML-powered pit stop prediction platform using real F1 telemetry data (101K+ laps, 2022–2025). Features 3D race visualizations, tyre degradation modeling, and lap-by-lap strategy recommendations.
+
+#### 🚗 Ford Car Price Prediction
+End-to-end pipeline for UK Ford used car pricing. Streamlit dashboard with 3D Plotly visualizations, live price gauge, and animated bubble charts. Trained on 17,966 real listings.
+
+#### 🏥 CordisAI Heart Prediction
+Dark medical-themed KNN dashboard for heart disease risk assessment. Radar charts for patient profiles, risk probability gauges, and benchmarking across 5 algorithms.
+
+#### 📈 Stock Price Prediction
+Next-day stock closing price prediction using correlated multi-stock signals, temporal lag features, and rolling market statistics across 5 stocks.
+
+#### 🎓 Edumind Student Performance
+Full-stack ML app with XGBoost ensemble (R²=0.9999), Supabase integration, and a Flask frontend. Includes Voting, Stacking, and Blending ensemble techniques.
+
+---
+
 ## 🛠️ Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
 ![NumPy](https://img.shields.io/badge/NumPy-Scientific-013243?logo=numpy)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?logo=scikit-learn)
+![XGBoost](https://img.shields.io/badge/XGBoost-Boosting-FF6F00?logo=xgboost)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c)
 ![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4c72b0)
 
