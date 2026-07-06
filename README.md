@@ -1,90 +1,90 @@
-# 🏕️ Machine Learning Basecamp
+# Machine Learning Basecamp
 
 > A complete, beginner-friendly Machine Learning repository — from raw data to advanced models.
 > Every concept is backed by theory, real-world intuition, and hands-on projects.
 
 ---
 
-## 📚 Series Roadmap
+## Repository Structure
+
+```
+ML MODELS/
+├── 01_Regression/                    # Regression models
+│   ├── 01_Linear_Regression.ipynb        - Food delivery time prediction
+│   ├── 02_Food_Delivery_Time_Prediction  - Extended EDA + modeling
+│   ├── 03_Calories_Burn_Prediction       - Random Forest regressor
+│   ├── 04_House_Price_Prediction         - Real estate price prediction
+│   └── 05_Insurance_Charges_Prediction   - Medical insurance cost prediction
+│
+├── 02_Classification/                # Classification models
+│   ├── 01_Logistic_Regression.ipynb      - Titanic survival
+│   ├── 02_KNN.ipynb                      - Student performance classification
+│   ├── 03_Naive_Bayes.ipynb              - Credit card churn prediction
+│   ├── 04_Decision_Tree.ipynb            - Heart disease classification
+│   ├── 05_Loan_Approval_Prediction       - Random Forest classifier
+│   ├── 06_Online_Shoppers_Revenue        - Purchase intention prediction
+│   ├── 07_Titanic_Survival_Prediction    - Extended multi-model analysis
+│   ├── 08_Heart_Disease_AdaBoost         - AdaBoost on heart data
+│   ├── 09_Heart_Disease_Full_Pipeline    - Complete EDA + classification
+│   ├── 10_Customer_Churn_Prediction      - Logistic Regression on churn
+│   └── 11_Shoppers_Intention_Prediction  - Automated EDA + classification
+│
+├── 03_Ensemble_Methods/              # Ensemble & boosting techniques
+│   ├── 01_Bagging_Random_Forest.ipynb    - Bagging + RF + Stacking
+│   ├── 02_AdaBoost_Gradient_XGBoost      - Three boosting methods compared
+│   ├── 03_Multi_Model_Comparison         - LR, SVM, NB, KNN, DT benchmark
+│   ├── 04_Cross_Validation               - K-Fold & Stratified CV
+│   ├── 05_Gradient_Boosting_Regression   - Insurance charges prediction
+│   ├── 06_Grid_Search_CV                 - Hyperparameter tuning
+│   └── 07_Stacking_Classifier            - Stacking with meta-learner
+│
+├── 04_Clustering/                    # Unsupervised learning
+│   ├── 01_Hierarchical_Clustering.ipynb  - Country socio-economic groups
+│   └── 02_KMeans_Clustering.ipynb        - Elbow method + cluster analysis
+│
+├── 05_Preprocessing/                 # Data preparation & EDA
+│   ├── 01_SKLearn_Pipelines.ipynb        - End-to-end ML pipelines
+│   ├── 02_SMOTE_Imbalance_Handling       - Class imbalance with SMOTE
+│   ├── 03_Heart_Disease_EDA.ipynb        - Correlation, scaling, encoding
+│   ├── 04_Insurance_Data_EDA.ipynb       - Feature engineering pipeline
+│   └── 05_EV_Population_EDA.ipynb        - Electric vehicle data analysis
+│
+├── 06_Projects/                      # Full projects
+│   ├── 01_Gym_Members_Analysis.ipynb     - Workout data analysis
+│   └── 02_Insurance_ML_Project.ipynb     - Complete ML project
+│
+├── 07_NLP/                           # Natural Language Processing
+│   ├── LR_SVM_NB_K_NN_DT.ipynb          - NLP text classification
+│   └── train.txt                         - Training data
+│
+└── datasets/                         # All datasets
+    ├── Food_Delivery_Times.csv
+    ├── calories.csv
+    ├── customer_churn_prediction_dataset.csv
+    ├── heart.csv
+    ├── House_Price_Dataset.csv
+    ├── Adaboost_heart.csv
+    ├── gym_members_exercise_tracking.csv
+    ├── online_shoppers_intention.csv
+    ├── global_power_plant_database.csv
+    ├── expenses.csv
+    └── ...
+```
+
+---
+
+## Series Roadmap
 
 | Part | Topic | Status |
 |------|-------|--------|
-| Part 1 — Foundations | EDA, Data Cleaning, Feature Engineering | ✅ Done |
-| Part 2 — Regression | Linear Regression, Cost Function, Gradient Descent | ✅ Done |
-| Part 3 — Classification | Logistic Regression, KNN, SVM, Decision Trees, Naive Bayes | ✅ Done |
-| Part 4 — Advanced ML | Ensemble Methods, Clustering, PCA, XGBoost | ✅ Done |
+| Part 1 — Foundations | EDA, Data Cleaning, Feature Engineering | Done |
+| Part 2 — Regression | Linear Regression, Cost Function, Gradient Descent | Done |
+| Part 3 — Classification | Logistic Regression, KNN, SVM, Decision Trees, Naive Bayes | Done |
+| Part 4 — Advanced ML | Ensemble Methods, Clustering, PCA, XGBoost | Done |
 
 ---
 
-## Part 1 — ML Foundations
-
-> *"Most critical and often ignored steps in ML — but they make or break your model's success."*
-
-### What You'll Learn
-- How to define a problem clearly
-- Where and how to collect quality data
-- Exploratory Data Analysis (EDA) — the right way
-- Data Cleaning & Preprocessing techniques
-- Feature Selection — choosing what matters
-- Feature Engineering — boosting model performance
-
----
-
-### 🔬 Projects
-
-#### 📌 Project 1 — Heart Disease EDA & Preprocessing
-
-Performed full EDA on a clinical heart disease dataset. Key work includes:
-- Handled zero-value anomalies in `Cholesterol` and `RestingBP` via mean imputation
-- Visualized distributions using histplots and violin plots
-- Explored feature relationships using heatmaps and countplots
-- Applied One-Hot Encoding for categorical features
-- Scaled numerical features using `StandardScaler` — model-ready output
-
-**Notebook:** [`Heart_Dataframe.ipynb`](./Heart_Dataframe.ipynb)
-
----
-
-#### 📌 Project 2 — Insurance Charges EDA & Feature Engineering
-
-End-to-end preprocessing pipeline on a medical insurance dataset. Key work includes:
-- Applied Label Encoding for binary columns (`sex`, `smoker`)
-- Applied One-Hot Encoding for the `region` column
-- Engineered a new `bmi_category` feature (Underweight / Normal / Overweight / Obese)
-- Used **Pearson Correlation** for numerical feature selection
-- Used **Chi-Square Test** for categorical feature selection
-- Final feature set selected for predicting insurance `charges`
-
-**Notebook:** [`Insurance_Dataframe.ipynb`](./Insurance_Dataframe.ipynb)
-
----
-
-##  Done ✔️
-
-### Part 2 — Regression
-- Linear Regression — concept and intuition
-- Cost Function & Gradient Descent
-- Model Evaluation: MSE, RMSE, R² Score
-- Train-Test Split — why it matters
-- Overfitting vs Underfitting with visuals
-- **Project:** House Price Prediction
-
-### Part 3 — Classification
-- Logistic Regression, KNN, Decision Trees, Naive Bayes, SVM
-- Evaluation: Accuracy, Precision, Recall, F1-Score, Confusion Matrix
-- **Project:** Titanic Survival Classification
-
-### Part 4 — Advanced ML
-- Cross-Validation & Hyperparameter Tuning (Grid Search, Random Search)
-- Ensemble Learning — Bagging, Boosting, Stacking
-- Random Forest, AdaBoost, Gradient Boosting, XGBoost
-- Unsupervised Learning — K-Means, DBSCAN
-- Dimensionality Reduction — PCA
-- **Projects:** Clustering & PCA visualizations
-
----
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
@@ -95,11 +95,11 @@ End-to-end preprocessing pipeline on a medical insurance dataset. Key work inclu
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
-git clone https://github.com/yourusername/machine-learning-basecamp.git
-cd machine-learning-basecamp
+git clone https://github.com/loisekk/Machine-Learning-Basecamp.git
+cd Machine-Learning-Basecamp
 pip install -r requirements.txt
 ```
 
@@ -107,6 +107,6 @@ Open any notebook in Jupyter or Google Colab and follow along.
 
 ---
 
-## ⭐ Support
+## License
 
-If this repo helped you, consider giving it a star — it helps others find it too!
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
